@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate — SprouHub</title>
+<meta name="description" content="Give once or give monthly to SprouHub. See exactly what your support helps make possible.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .donate-layout{ display:grid; grid-template-columns:1.2fr .9fr; gap:44px; align-items:start; }
+  @media (max-width:860px){ .donate-layout{ grid-template-columns:1fr; } }
+  .amount-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0 22px; }
+  @media (max-width:500px){ .amount-grid{ grid-template-columns:repeat(2,1fr); } }
+  .amount-tile{
+    border:2px solid var(--line); border-radius:var(--r-sm); padding:16px 10px; text-align:center;
+    cursor:pointer; background:var(--paper); font-family:var(--font-display); font-weight:700; font-size:1.15rem; color:var(--forest);
+  }
+  .amount-tile input{ position:absolute; opacity:0; }
+  .amount-tile:has(input:checked){ border-color:var(--leaf); background:#EEF6EA; }
+  .amount-tile:has(input:focus-visible){ outline:3px solid var(--sky); outline-offset:2px; }
+  .impact-preview{
+    background:var(--cream-dim); border-radius:var(--r-md); padding:20px; margin-bottom:24px; font-weight:600; color:var(--forest-soft);
+  }
+  .summary-card{ position:sticky; top:100px; }
+  .summary-row{ display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line); font-size:.95rem; }
+  .summary-row.total{ font-weight:800; color:var(--forest); border-bottom:none; font-size:1.1rem; }
+</style>
+</head>
+<body>
+<div id="site-header" class="site-header"></div>
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>You can help something good grow.</h1>
+      <p class="lead">Choose an amount and a frequency below. Every rupee is tracked and reported back to you.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:10px;">
+    <div class="container donate-layout">
+
+      <form id="donateForm">
+        <div class="card">
+          <h3>1. How often?</h3>
+          <div class="freq-toggle" role="group" aria-label="Donation frequency">
+            <button type="button" class="active" id="freqOnce">Give once</button>
+            <button type="button" id="freqMonthly">Give monthly</button>
+          </div>
+          <p class="hint" id="freqHint">A one-time gift makes an immediate difference.</p>
+
+          <h3 style="margin-top:30px;">2. Choose an amount</h3>
+          <div class="amount-grid" id="amountGrid">
+            <label class="amount-tile"><input type="radio" name="amount" value="500">₹500</label>
+            <label class="amount-tile"><input type="radio" name="amount" value="1000" checked>₹1,000</label>
+            <label class="amount-tile"><input type="radio" name="amount" value="2500">₹2,500</label>
+            <label class="amount-tile"><input type="radio" name="amount" value="5000">₹5,000</label>
+            <label class="amount-tile" style="grid-column:span 2;">
+              <input type="radio" name="amount" value="custom" id="customRadio">
+              <span id="customLabel">Custom amount</span>
+            </label>
+          </div>
+          <div class="form-field" id="customAmountField" style="display:none;">
+            <label for="customAmount">Enter your amount (₹)</label>
+            <input type="text" inputmode="numeric" id="customAmount" placeholder="e.g. 1500">
+          </div>
+
+          <div class="impact-preview" id="impactPreview">
+            ₹1,000 helps support supplies and materials for a community initiative. <span class="placeholder-tag">replace with verified impact copy</span>
+          </div>
+
+          <h3>3. Your details</h3>
+          <div class="form-field">
+            <label for="donorName">Full name</label>
+            <input type="text" id="donorName" required>
+          </div>
+          <div class="form-field">
+            <label for="donorEmail">Email (for your receipt)</label>
+            <input type="email" id="donorEmail" required>
+          </div>
+
+          <div class="card" style="background:var(--cream-dim);box-shadow:none;margin:26px 0;">
+            <h3 style="margin-bottom:12px;">Before you pay</h3>
+            <div class="trust-grid">
+              <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span>Secure payment processing <span class="placeholder-tag">confirm provider</span></span></div>
+              <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"/></svg><span>Registered NGO <span class="placeholder-tag">add registration no.</span></span></div>
+              <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg><span>Tax-deductible where applicable <span class="placeholder-tag">confirm details</span></span></div>
+              <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg><span>Cancel or change monthly gifts anytime</span></div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Complete Donation</button>
+          <p class="hint text-center" style="margin-top:14px;">Monthly support helps us plan ahead and keep community projects moving throughout the year. You can pause or cancel anytime — we'll never hide this option.</p>
+        </div>
+      </form>
+
+      <aside class="card summary-card">
+        <h3>Your gift summary</h3>
+        <div class="summary-row"><span>Frequency</span><strong id="sumFreq">One-time</strong></div>
+        <div class="summary-row"><span>Amount</span><strong id="sumAmount">₹1,000</strong></div>
+        <div class="summary-row total"><span>Total today</span><span id="sumTotal">₹1,000</span></div>
+        <p class="hint" style="margin-top:16px;">100% of published program allocations are reviewed annually and shared in our transparency report.</p>
+        <a href="about.html#transparency" class="btn btn-secondary btn-block" style="margin-top:10px;">View Our Reports</a>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+<div id="site-footer" class="site-footer"></div>
+<script src="common.js"></script>
+<script>
+  const impactText = {
+    500:"₹500 helps provide essential resources to a family for a week.",
+    1000:"₹1,000 helps support supplies and materials for a community initiative.",
+    2500:"₹2,500 helps expand a local program to reach more neighbors.",
+    5000:"₹5,000 helps power a larger, sustained initiative.",
+  };
+  const freqOnce = document.getElementById("freqOnce");
+  const freqMonthly = document.getElementById("freqMonthly");
+  const freqHint = document.getElementById("freqHint");
+  const sumFreq = document.getElementById("sumFreq");
+  let frequency = "once";
+
+  freqOnce.addEventListener("click", () => {
+    frequency="once"; freqOnce.classList.add("active"); freqMonthly.classList.remove("active");
+    freqHint.textContent = "A one-time gift makes an immediate difference.";
+    sumFreq.textContent = "One-time"; updateSummary();
+  });
+  freqMonthly.addEventListener("click", () => {
+    frequency="monthly"; freqMonthly.classList.add("active"); freqOnce.classList.remove("active");
+    freqHint.textContent = "Monthly support helps us plan ahead and keep community projects moving throughout the year.";
+    sumFreq.textContent = "Monthly"; updateSummary();
+  });
+
+  const amountRadios = document.querySelectorAll('input[name="amount"]');
+  const customField = document.getElementById("customAmountField");
+  const customAmount = document.getElementById("customAmount");
+  const impactPreview = document.getElementById("impactPreview");
+  const sumAmount = document.getElementById("sumAmount");
+  const sumTotal = document.getElementById("sumTotal");
+
+  function currentAmount(){
+    const checked = document.querySelector('input[name="amount"]:checked');
+    if(!checked) return 0;
+    if(checked.value === "custom") return parseInt(customAmount.value)||0;
+    return parseInt(checked.value);
+  }
+
+  function updateSummary(){
+    const amt = currentAmount();
+    const display = amt ? "₹"+amt.toLocaleString() : "—";
+    sumAmount.textContent = display + (frequency==="monthly" && amt ? " / mo" : "");
+    sumTotal.textContent = display;
+    impactPreview.innerHTML = impactText[amt]
+      ? impactText[amt] + ' <span class="placeholder-tag">replace with verified impact copy</span>'
+      : "Your custom gift helps power whatever a community needs most right now. <span class=\"placeholder-tag\">replace with verified impact copy</span>";
+  }
+
+  amountRadios.forEach(r => r.addEventListener("change", () => {
+    customField.style.display = r.value==="custom" ? "block" : "none";
+    updateSummary();
+  }));
+  customAmount.addEventListener("input", updateSummary);
+  updateSummary();
+
+  // preselect via ?amount=
+  const params = new URLSearchParams(location.search);
+  const pre = params.get("amount");
+  if(pre){
+    const match = [...amountRadios].find(r=>r.value===pre);
+    if(match){ match.checked = true; updateSummary(); }
+  }
+
+  document.getElementById("donateForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    window.location.href = "donate-success.html";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impact — SprouHub</title>
+<meta name="description" content="See SprouHub's impact dashboard: people reached, projects completed, funds deployed, and current campaigns.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .metric-card{ text-align:center; }
+  .metric-num{ font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--forest); }
+  .metric-label{ color:var(--ink-soft); font-weight:600; font-size:.92rem; margin-top:6px; }
+  .campaign-card{ padding:0; overflow:hidden; }
+  .campaign-top{ height:120px; display:flex; align-items:center; justify-content:center; font-size:2.4rem; }
+  .campaign-body{ padding:24px; }
+</style>
+</head>
+<body>
+<div id="site-header" class="site-header"></div>
+<main id="main">
+
+  <section class="page-hero center">
+    <div class="container">
+      <h1>See what we're growing</h1>
+      <p class="lead" style="margin:0 auto;">A transparent look at where support goes and what it makes possible. <span class="placeholder-tag">all figures editable</span></p>
+    </div>
+  </section>
+
+  <section style="padding-top:10px;">
+    <div class="container">
+      <div class="card-grid grid-4">
+        <div class="card metric-card"><div class="metric-num" data-count="12500" data-suffix="+">0</div><div class="metric-label">People Reached</div></div>
+        <div class="card metric-card"><div class="metric-num" data-count="86">0</div><div class="metric-label">Projects Completed</div></div>
+        <div class="card metric-card"><div class="metric-num" data-count="32">0</div><div class="metric-label">Communities Supported</div></div>
+        <div class="card metric-card"><div class="metric-num" data-count="8200" data-suffix="+">0</div><div class="metric-label">Volunteer Hours</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Funds deployed by program</h2>
+        <p>A simple breakdown of how support is allocated across our active programs. <span class="placeholder-tag">replace with audited figures</span></p>
+      </div>
+      <div class="card stack-gap">
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-weight:700;"><span>Community Development</span><span>32%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:32%;background:var(--leaf);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-weight:700;"><span>Education</span><span>24%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:24%;background:var(--sky);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-weight:700;"><span>Food &amp; Essentials</span><span>22%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:22%;background:var(--coral);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-weight:700;"><span>Wellbeing</span><span>12%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:12%;background:var(--pink);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-weight:700;"><span>Environment</span><span>10%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:10%;background:var(--yellow);"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--paper);">
+    <div class="container">
+      <div class="section-head">
+        <h2>Active campaigns</h2>
+        <p>Real, currently-running initiatives with live progress. Deadlines and countdowns are shown only when genuinely applicable.</p>
+      </div>
+      <div class="card-grid grid-3">
+        <article class="card campaign-card">
+          <div class="campaign-top" style="background:var(--fresh-light);">📚</div>
+          <div class="campaign-body">
+            <h3>Back-to-School Supplies</h3>
+            <p>Goal: ₹4,00,000 <span class="placeholder-tag">edit</span></p>
+            <div class="progress-track" style="margin-bottom:8px;"><div class="progress-fill" style="width:64%;"></div></div>
+            <p class="small" style="margin-bottom:14px;">₹2,56,000 raised (64%)</p>
+            <a href="donate.html" class="btn btn-secondary btn-sm btn-block">Support This Campaign</a>
+          </div>
+        </article>
+        <article class="card campaign-card">
+          <div class="campaign-top" style="background:#DDEFF5;">🌍</div>
+          <div class="campaign-body">
+            <h3>Community Tree Planting</h3>
+            <p>Goal: ₹2,00,000 <span class="placeholder-tag">edit</span></p>
+            <div class="progress-track" style="margin-bottom:8px;"><div class="progress-fill" style="width:41%;background:var(--sky);"></div></div>
+            <p class="small" style="margin-bottom:14px;">₹82,000 raised (41%)</p>
+            <a href="donate.html" class="btn btn-secondary btn-sm btn-block">Support This Campaign</a>
+          </div>
+        </article>
+        <article class="card campaign-card">
+          <div class="campaign-top" style="background:#FBE7E1;">🍲</div>
+          <div class="campaign-body">
+            <h3>Winter Essentials Drive</h3>
+            <p>Goal: ₹3,00,000 <span class="placeholder-tag">edit</span></p>
+            <div class="progress-track" style="margin-bottom:8px;"><div class="progress-fill" style="width:78%;background:var(--coral);"></div></div>
+            <p class="small" style="margin-bottom:14px;">₹2,34,000 raised (78%)</p>
+            <a href="donate.html" class="btn btn-secondary btn-sm btn-block">Support This Campaign</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Recent milestones</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-year">2026</div><p>Reached 12,500+ lives across 32 communities. <span class="placeholder-tag">edit</span></p></div>
+        <div class="timeline-item"><div class="timeline-year">2025</div><p>Launched the Wellbeing program and volunteer mentorship track. <span class="placeholder-tag">edit</span></p></div>
+        <div class="timeline-item"><div class="timeline-year">2024</div><p>Crossed 1,000 active volunteers for the first time. <span class="placeholder-tag">edit</span></p></div>
+        <div class="timeline-item"><div class="timeline-year">2023</div><p>SprouHub founded with its first community program. <span class="placeholder-tag">edit</span></p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer" class="site-footer"></div>
+<script src="common.js"></script>
+</body>
+</html>

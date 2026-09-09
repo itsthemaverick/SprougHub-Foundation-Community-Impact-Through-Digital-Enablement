@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteers — SprouHub</title>
+<meta name="description" content="Meet the volunteers powering SprouHub's community programs, and find your own way to get involved.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="site-header" class="site-header"></div>
+<main id="main">
+
+  <section class="page-hero center">
+    <div class="container">
+      <h1>Meet the people helping good grow.</h1>
+      <p class="lead" style="margin:0 auto;">SprouHub is powered by people who choose to show up, lend a hand, share a skill, and make their communities a little brighter.</p>
+      <div class="hero-cta" style="justify-content:center;">
+        <a href="#signup" class="btn btn-primary">Become a Volunteer</a>
+        <a href="#directory" class="btn btn-secondary">Meet Our Volunteers</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact-strip" style="padding-top:44px;padding-bottom:44px;">
+    <div class="container impact-grid">
+      <div><div class="impact-num" data-count="1450" data-suffix="+">0</div><div class="impact-label">Volunteers</div></div>
+      <div><div class="impact-num" data-count="8200" data-suffix="+">0</div><div class="impact-label">Volunteer Hours</div></div>
+      <div><div class="impact-num" data-count="32">0</div><div class="impact-label">Communities Reached</div></div>
+      <div><div class="impact-num" data-count="18">0</div><div class="impact-label">Active Initiatives</div></div>
+    </div>
+  </section>
+
+  <!-- DIRECTORY -->
+  <section id="directory">
+    <div class="container">
+      <div class="section-head">
+        <h2>Meet Our SprouHub Family</h2>
+        <p>A growing community of volunteers contributing time and skills across every program.</p>
+      </div>
+
+      <div class="search-row">
+        <input type="text" class="search-input" id="volSearch" placeholder="Search by name, role, or skill">
+      </div>
+      <div class="filters" id="volFilters">
+        <button class="chip active" data-filter="all">All Volunteers</button>
+        <button class="chip" data-filter="community">Community</button>
+        <button class="chip" data-filter="education">Education</button>
+        <button class="chip" data-filter="environment">Environment</button>
+        <button class="chip" data-filter="events">Events</button>
+        <button class="chip" data-filter="fundraising">Fundraising</button>
+        <button class="chip" data-filter="digital">Digital &amp; Creative</button>
+        <button class="chip" data-filter="operations">Operations</button>
+        <button class="chip" data-filter="leadership">Leadership</button>
+      </div>
+
+      <div class="card-grid grid-4" id="volGrid">
+        <!-- populated by script -->
+      </div>
+      <p id="noResults" class="text-center" style="display:none;">No volunteers match that search — try a different name or skill.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section style="background:var(--paper);">
+    <div class="container">
+      <div class="section-head">
+        <h2>People making waves</h2>
+        <p>A closer look at a few volunteers going above and beyond.</p>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card text-center">
+          <div class="avatar" style="width:100px;height:100px;font-size:2rem;background:var(--leaf);margin-bottom:16px;">AS</div>
+          <h3>Aarav Sharma</h3>
+          <div class="volunteer-role">Community Volunteer</div>
+          <p style="font-style:italic;">"Every event we run reminds me how much a small act can ripple outward."</p>
+          <p class="small">Organizes local outreach events and community drives across three neighborhoods.</p>
+        </div>
+        <div class="card text-center">
+          <div class="avatar" style="width:100px;height:100px;font-size:2rem;background:var(--sky);margin-bottom:16px;">NP</div>
+          <h3>Nisha Patel</h3>
+          <div class="volunteer-role">Education Lead</div>
+          <p style="font-style:italic;">"Watching a kid go from struggling to confident is why I keep coming back."</p>
+          <p class="small">Coordinates tutoring schedules and mentor matching for 60+ students.</p>
+        </div>
+        <div class="card text-center">
+          <div class="avatar" style="width:100px;height:100px;font-size:2rem;background:var(--coral);margin-bottom:16px;">DK</div>
+          <h3>Dev Kapoor</h3>
+          <div class="volunteer-role">Digital &amp; Creative</div>
+          <p style="font-style:italic;">"I get to use design skills from my day job for something that actually matters to me."</p>
+          <p class="small">Leads visual storytelling and social content for active campaigns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THEY SHOW UP -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Why they show up</h2>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card">
+          <span class="story-tag">Why I joined</span>
+          <h3>Aarav Sharma</h3>
+          <p>"I wanted to actually meet the people I was helping, not just donate and forget."</p>
+          <p class="small"><strong>What volunteering means to him:</strong> A weekly reminder that change starts locally.</p>
+        </div>
+        <div class="card">
+          <span class="story-tag">Why I joined</span>
+          <h3>Nisha Patel</h3>
+          <p>"A friend invited me to one tutoring session. I never stopped coming back."</p>
+          <p class="small"><strong>What volunteering means to her:</strong> A second classroom she never expected to love.</p>
+        </div>
+        <div class="card">
+          <span class="story-tag">Why I joined</span>
+          <h3>Dev Kapoor</h3>
+          <p>"I realized my design skills could do more than sell products — they could tell real stories."</p>
+          <p class="small"><strong>What volunteering means to him:</strong> Purposeful use of a skill he already loved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUR SKILLS MATTER -->
+  <section style="background:var(--paper);">
+    <div class="container">
+      <div class="section-head center">
+        <h2>You don't need superpowers. You just need something to give.</h2>
+      </div>
+      <div class="card-grid grid-4">
+        <div class="card text-center"><div style="font-size:1.8rem;">🎨</div><p style="margin-top:10px;font-weight:600;">Design</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">📸</div><p style="margin-top:10px;font-weight:600;">Photography</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">💻</div><p style="margin-top:10px;font-weight:600;">Technology</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">📱</div><p style="margin-top:10px;font-weight:600;">Social Media</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">🎤</div><p style="margin-top:10px;font-weight:600;">Public Speaking</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">📚</div><p style="margin-top:10px;font-weight:600;">Teaching</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">🤝</div><p style="margin-top:10px;font-weight:600;">Outreach</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">📋</div><p style="margin-top:10px;font-weight:600;">Event Planning</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">💰</div><p style="margin-top:10px;font-weight:600;">Fundraising</p></div>
+        <div class="card text-center"><div style="font-size:1.8rem;">🌱</div><p style="margin-top:10px;font-weight:600;">Field Work</p></div>
+      </div>
+      <div class="text-center" style="margin-top:32px;">
+        <a href="#signup" class="btn btn-primary">Find Your Role</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section id="signup">
+    <div class="container" style="max-width:700px;">
+      <div class="section-head center">
+        <h2>Join SprouHub</h2>
+        <p style="margin:0 auto;">Tell us a bit about yourself — we'll follow up with next steps.</p>
+      </div>
+      <form class="card" id="volForm">
+        <div class="form-field">
+          <label for="vName">Full name</label>
+          <input type="text" id="vName" required>
+        </div>
+        <div class="form-field">
+          <label for="vEmail">Email</label>
+          <input type="email" id="vEmail" required>
+        </div>
+        <div class="form-field">
+          <label for="vPhone">Phone <span class="hint" style="display:inline;">(only if you're comfortable — optional)</span></label>
+          <input type="tel" id="vPhone">
+        </div>
+        <div class="form-field">
+          <label for="vCity">City / area</label>
+          <input type="text" id="vCity" required>
+        </div>
+
+        <fieldset>
+          <legend>Areas of interest</legend>
+          <div class="option-grid">
+            <label class="option-tile"><input type="checkbox" name="interest">Community Outreach</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Education</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Events</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Fundraising</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Digital</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Design</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Photography</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Environment</label>
+            <label class="option-tile"><input type="checkbox" name="interest">Other</label>
+          </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="vSkills">Skills</label>
+          <input type="text" id="vSkills" placeholder="e.g. Event planning, photography, teaching">
+        </div>
+
+        <fieldset>
+          <legend>Availability</legend>
+          <div class="option-grid">
+            <label class="option-tile"><input type="radio" name="availability">One-time</label>
+            <label class="option-tile"><input type="radio" name="availability">Weekly</label>
+            <label class="option-tile"><input type="radio" name="availability">Monthly</label>
+            <label class="option-tile"><input type="radio" name="availability">Flexible</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred format</legend>
+          <div class="option-grid" style="grid-template-columns:repeat(3,1fr);">
+            <label class="option-tile"><input type="radio" name="format">In person</label>
+            <label class="option-tile"><input type="radio" name="format">Remote</label>
+            <label class="option-tile"><input type="radio" name="format">Either</label>
+          </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="vIntro">A short introduction</label>
+          <textarea id="vIntro" placeholder="Tell us a little about yourself and why you'd like to volunteer"></textarea>
+        </div>
+
+        <div class="check-row form-field">
+          <input type="checkbox" id="vConsent" required>
+          <label for="vConsent" style="margin:0;font-weight:500;">I consent to SprouHub storing my details to process this application and contact me about volunteering.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Join SprouHub</button>
+      </form>
+      <div class="card text-center" id="volSuccess" style="display:none;margin-top:20px;background:#EEF6EA;">
+        <h3>Welcome to the SprouHub family! 🌱</h3>
+        <p>We've received your details. Our team will be in touch with the next steps.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer" class="site-footer"></div>
+<script src="common.js"></script>
+<script>
+  const VOLUNTEERS = [
+    {name:"Aarav Sharma", role:"Community Volunteer", cat:"community", skills:"Event Planning · Outreach · Photography", since:"2025", color:"#4C8B5B"},
+    {name:"Nisha Patel", role:"Education Lead", cat:"education", skills:"Tutoring · Mentorship", since:"2023", color:"#6BB6D6"},
+    {name:"Dev Kapoor", role:"Digital & Creative", cat:"digital", skills:"Design · Video · Social Media", since:"2024", color:"#EF6F4C"},
+    {name:"Meera Iyer", role:"Fundraising Volunteer", cat:"fundraising", skills:"Grant Writing · Donor Relations", since:"2022", color:"#F4B740"},
+    {name:"Kabir Singh", role:"Field Coordinator", cat:"environment", skills:"Field Work · Logistics", since:"2024", color:"#7CB56A"},
+    {name:"Priya Nair", role:"Events Volunteer", cat:"events", skills:"Event Planning · Public Speaking", since:"2023", color:"#F3B7C4"},
+    {name:"Rahul Verma", role:"Operations Volunteer", cat:"operations", skills:"Logistics · Data Entry", since:"2025", color:"#2E5540"},
+    {name:"Sana Khan", role:"Leadership Team", cat:"leadership", skills:"Program Management · Training", since:"2021", color:"#4C8B5B"},
+    {name:"Vikram Rao", role:"Community Volunteer", cat:"community", skills:"Outreach · Translation", since:"2025", color:"#6BB6D6"},
+    {name:"Ananya Gupta", role:"Education Volunteer", cat:"education", skills:"Tutoring · Curriculum", since:"2024", color:"#EF6F4C"},
+    {name:"Farhan Ali", role:"Digital Volunteer", cat:"digital", skills:"Web · Photography", since:"2023", color:"#F4B740"},
+    {name:"Ishita Bose", role:"Fundraising Volunteer", cat:"fundraising", skills:"Campaign Strategy", since:"2022", color:"#7CB56A"},
+  ];
+
+  function initials(name){ return name.split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase(); }
+
+  function renderVolunteers(list){
+    const grid = document.getElementById("volGrid");
+    const noResults = document.getElementById("noResults");
+    grid.innerHTML = "";
+    if(!list.length){ noResults.style.display="block"; return; }
+    noResults.style.display="none";
+    list.forEach(v => {
+      const card = document.createElement("div");
+      card.className = "card volunteer-card";
+      card.innerHTML = `
+        <div class="avatar" style="background:${v.color};">${initials(v.name)}</div>
+        <h3 style="font-size:1.1rem;">${v.name}</h3>
+        <div class="volunteer-role">${v.role}</div>
+        <div class="volunteer-skills">${v.skills}</div>
+        <div class="volunteer-since">Volunteering since ${v.since}</div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  let activeFilter = "all";
+  function applyFilters(){
+    const term = document.getElementById("volSearch").value.toLowerCase();
+    const filtered = VOLUNTEERS.filter(v => {
+      const matchesFilter = activeFilter === "all" || v.cat === activeFilter;
+      const matchesSearch = !term || v.name.toLowerCase().includes(term) || v.role.toLowerCase().includes(term) || v.skills.toLowerCase().includes(term);
+      return matchesFilter && matchesSearch;
+    });
+    renderVolunteers(filtered);
+  }
+
+  document.querySelectorAll("#volFilters .chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      document.querySelectorAll("#volFilters .chip").forEach(c=>c.classList.remove("active"));
+      chip.classList.add("active");
+      activeFilter = chip.getAttribute("data-filter");
+      applyFilters();
+    });
+  });
+  document.getElementById("volSearch").addEventListener("input", applyFilters);
+  renderVolunteers(VOLUNTEERS);
+
+  document.getElementById("volForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("volForm").style.display = "none";
+    document.getElementById("volSuccess").style.display = "block";
+    document.getElementById("volSuccess").scrollIntoView({behavior:"smooth", block:"center"});
+  });
+</script>
+</body>
+</html>
